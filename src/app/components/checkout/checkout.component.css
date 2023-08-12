@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+    max-width: 40rem;
+    width: 100%;
+  }
+  
+  .form-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-area {
+    margin-bottom: 1rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #17a2b8; /* Highlight the input field on focus */
+  }
+  
+  .btn {
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .btn-info {
+    background-color: #17a2b8;
+    color: #fff;
+  }
+  
+  /* Optional: Add additional styling to align labels and inputs properly */
+  .label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Add some spacing between form cards */
+  .form-card + .form-card {
+    margin-top: 1rem;
+  }
+
+  
+  

@@ -1,0 +1,49 @@
+<!-- <div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="row">
+
+              <div *ngFor="let tempProduct of products" class="col-md-3">
+
+                <div class="product-box">
+                    <img src="{{tempProduct.imageUrl}}" class="img-responsive">
+                    <h1>{{tempProduct.name}}</h1>
+                    <div class="price">{{tempProduct.unitPrice | currency:'USD'}}</div>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let tempProduct of products">
+        <div class="card text-center border-light mb-3" style= "max-width: 540px;">
+          <div class="card-body">
+            <a routerLink="/products/{{tempProduct.id}}">
+            <img src="{{ tempProduct.imageUrl }}" class="card-img-top img-fluid rounded-start" alt="Product">
+          </a>
+            <!-- <img src="{{ tempProduct.imageUrl }}" class="img-responsive" /> -->
+            <a routerLink="/products/{{tempProduct.id}}">
+            <h6 class="card-title">{{ tempProduct.name }}</h6>
+            </a>
+            <div class="card-text">
+              {{ tempProduct.unitPrice | currency : "INR" }}
+            </div>
+            <button  
+            (click)="addToCart(tempProduct)"
+            class="btn btn-primary btn-sm">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- if products empty then display this..-- --> 
+      <!-- *ngIf="products?.length==0" ? is safe navigation operator it guards against null and unefined values in property paths -->
+      <div *ngIf="products?.length==0" class="alert alert-warning col-md-12" role="alert">
+        No Products found.
+      </div>
+    </div>
+  </div>
+</div>
