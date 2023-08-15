@@ -8,11 +8,17 @@ import { OrderHistoryComponent } from './components/order-history/order-history.
 import { LoginComponent } from './components/login/login.component';
 import { authguardGuard } from './services/authguard.guard';
 import { AdminGuard } from './services/admin.guard';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 //import { authguardGuard } from './services/authguard.guard';
 
 const routes: Routes = [
+  {
+    path:'signup', 
+    component:SignUpComponent,
+    pathMatch:'full'
+  },
   {
     path:'login', 
     component:LoginComponent,

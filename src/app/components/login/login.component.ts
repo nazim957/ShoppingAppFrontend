@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit{
 
   loginFormGroup!: FormGroup;
   loginData={
-    username:'',
+    usernameOrEmail:'',
     password:'',
   };
 
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit{
   // console.log("checking:" + this.loginFormGroup.get('login')?.value.email);
   // console.log("checking:" + this.loginFormGroup.get('login')?.value.password);
   //console.log(this.loginFormGroup)
-  this.loginData.username=this.loginFormGroup.get('login')?.value.email
+  this.loginData.usernameOrEmail=this.loginFormGroup.get('login')?.value.email
   this.loginData.password= this.loginFormGroup.get('login')?.value.password
   console.log("Login Data", this.loginData);
   

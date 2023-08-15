@@ -11,7 +11,7 @@ export class OrderHistoryService {
 
   public getOrderHistory(email:string){
 
-
-    return this.http.get(`http://localhost:8080/api/orders/search/findByCustomerEmail/${email}`)
+   // return this.http.get(`http://localhost:8080/api/orders/search/findByCustomerEmail/${email}`)
+    return this.http.get(`https://shoppingappbackend-production.up.railway.app/api/orders/search/findByCustomerEmail/${email}`)
   }
 }

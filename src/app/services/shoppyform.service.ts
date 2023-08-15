@@ -10,11 +10,13 @@ export class ShoppyformService {
   constructor(private http:HttpClient) { }
 
   public getCountries(){
-    return this.http.get(`http://localhost:8080/api/countries`);
+   // return this.http.get(`http://localhost:8080/api/countries`);
+    return this.http.get(`https://shoppingappbackend-production.up.railway.app/api/countries`);
   }
 
   public getStates(code:string){
-    return this.http.get(`http://localhost:8080/api/states/search/findByCountryCode/${code}`);
+    //return this.http.get(`http://localhost:8080/api/states/search/findByCountryCode/${code}`);
+    return this.http.get(`https://shoppingappbackend-production.up.railway.app/api/states/search/findByCountryCode/${code}`);
   }
 
   //used observable bcz angualr comp can subscribe to this method and get async call results

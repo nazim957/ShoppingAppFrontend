@@ -14,11 +14,19 @@ export class LoginService {
    //current user: who is logged in
    public getCurrentUser()
    {
-     return this.http.get(`http://localhost:8080/current-user`)
+     //return this.http.get(`http://localhost:8080/current-user`)
+     return this.http.get(`https://shoppingappbackend-production.up.railway.app/current-user`)
    }
 
   public generateToken(loginData:any){
-    return this.http.post(`http://localhost:8080/generate-token`,loginData)
+    //return this.http.post(`http://localhost:8080/generate-token`,loginData)
+    return this.http.post(`https://shoppingappbackend-production.up.railway.app/generate-token`,loginData)
+  }
+
+  //register user
+  public register(signUpData:any){
+   // return this.http.post(`http://localhost:8080/user/`,signUpData)
+    return this.http.post(`https://shoppingappbackend-production.up.railway.app/user/`,signUpData)
   }
 
    //Login user: set token in LocalStorage so that if we close browser token will be there

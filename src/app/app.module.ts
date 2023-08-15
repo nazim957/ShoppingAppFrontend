@@ -18,6 +18,7 @@ import { OrderHistoryComponent } from './components/order-history/order-history.
 import { LoginComponent } from './components/login/login.component';
 import { LoginStatusComponent } from './components/login-status/login-status.component';
 import { AuthInterceptorProviders } from './services/auth.interceptor';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
  
@@ -34,7 +35,8 @@ import { AuthInterceptorProviders } from './services/auth.interceptor';
     CheckoutComponent,
     OrderHistoryComponent,
     LoginComponent,
-    LoginStatusComponent
+    LoginStatusComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

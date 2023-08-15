@@ -1,41 +1,36 @@
-<section class="vh-50">
-    <div class="container py-5 h-50">
+<section class="vh-100 bg-light">
+  <div class="container py-5 h-100">
       <div class="row d-flex align-items-center justify-content-center h-100">
-        <div class="col-md-8 col-lg-7 col-xl-6">
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-            class="img-fluid" alt="Phone image">
-        </div>
-        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-          <form   [formGroup]="loginFormGroup"
-          (ngSubmit)="onSubmit()"
-          class="form-container">
-          <div formGroupName="login" >
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-              <input type="email" id="email" class="form-control form-control-lg"
-              formControlName="email" />
-              
-              <label class="form-label" for="email">Email address</label>
-            </div>
-  
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-              <input type="password" id="form1Example23" class="form-control form-control-lg" 
-              formControlName="password"/>
-              <label class="form-label" for="form1Example23">Password</label>
-            </div>
-  
-        
-  
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
-  
-          
-  
-          
+          <div class="col-md-7 col-lg-6 col-xl-5">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                  class="img-fluid" alt="Phone image">
           </div>
-          </form>
-        </div>
+          <div class="col-md-5 col-lg-6 col-xl-5 offset-xl-1">
+              <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()" class="form-container bg-white p-4 rounded shadow-sm">
+                  <div formGroupName="login">
+                      <!-- Email input -->
+                      <div class="form-outline mb-4">
+                          <input type="email" id="email" class="form-control form-control-lg"
+                              formControlName="email" />
+                          <label class="form-label" for="email">Email address</label>
+                      </div>
+
+                      <!-- Password input -->
+                      <div class="form-outline mb-4">
+                          <input type="password" id="form1Example23" class="form-control form-control-lg"
+                              formControlName="password" />
+                          <label class="form-label" for="form1Example23">Password</label>
+                      </div>
+
+                      <!-- Submit button -->
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+
+                      <!-- Sign Up message and button -->
+                      <p class="text-center my-3">Don't have an account? Sign up now!</p>
+                      <a routerLink="/signup" class="btn btn-secondary btn-lg btn-block">Sign Up</a>
+                  </div>
+              </form>
+          </div>
       </div>
-    </div>
-  </section>
+  </div>
+</section>
