@@ -32,7 +32,8 @@ const routes: Routes = [
   },
   {
     path:'checkout', 
-    component:CheckoutComponent
+    component:CheckoutComponent,
+    canActivate: [authguardGuard], 
   },
   {
     path:'cart-details', 
