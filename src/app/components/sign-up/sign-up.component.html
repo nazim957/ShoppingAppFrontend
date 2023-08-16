@@ -14,7 +14,7 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="userName" class="form-control" formControlName="userName"/>
+                        <input type="text" id="userName" class="form-control" formControlName="userName" placeholder="Enter your user name"/>
                         <label class="form-label" for="userName" >User Name</label>
                       </div>
                       <div *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)" class="alert alert-danger mt-1">
@@ -26,7 +26,7 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0 form-group">
-                        <input type="text" id="firstName" class="form-control" formControlName="firstName"/>
+                        <input type="text" id="firstName" class="form-control" formControlName="firstName" placeholder="Enter your first name"/>
                         <label class="form-label" for="firstName" >First Name</label>
                       </div>
                       <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)" class="alert alert-danger mt-1">
@@ -37,7 +37,7 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="lastName" class="form-control" formControlName="lastName"/>
+                        <input type="text" id="lastName" class="form-control" formControlName="lastName" placeholder="Enter your last name"/>
                         <label class="form-label" for="lastName" >Last Name</label>
                       </div>
                       <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)" class="alert alert-danger mt-1">
@@ -49,7 +49,7 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="email" id="email" class="form-control" formControlName="email"/>
+                        <input type="email" id="email" class="form-control" formControlName="email" placeholder="Enter your email address"/>
                         <label class="form-label" for="email" >Your Email</label>
                       </div>
                       <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="alert alert-danger mt-1">
@@ -61,11 +61,11 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fa fa-phone fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="number" id="phone" class="form-control" formControlName="phone"/>
+                        <input type="number" id="phone" class="form-control" formControlName="phone" placeholder="Enter your contact no."/>
                         <label class="form-label" for="phone" >Contact No.</label>
                       </div>
                       <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" class="alert alert-danger mt-1">
-                        <div *ngIf="phone?.errors?.['required'] || phone?.errors?.['notOnlyWhitespace']">Email is Required</div>
+                        <div *ngIf="phone?.errors?.['required'] || phone?.errors?.['notOnlyWhitespace']">Contact no. is Required</div>
                         <div *ngIf="phone?.errors?.['pattern']">Conatact no. must be valid</div>
                       </div>
                     </div>
@@ -73,7 +73,7 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="password" class="form-control" formControlName="password"/>
+                        <input type="password" id="password" class="form-control" formControlName="password" placeholder="Enter your password"/>
                         <label class="form-label" for="password" >Password</label>
                       </div>
                       <br>
@@ -86,7 +86,7 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="confirmpassword" class="form-control" formControlName="confirmpassword" />
+                        <input type="password" id="confirmpassword" class="form-control" formControlName="confirmpassword" placeholder="confirm password"/>
                         <label class="form-label" for="confirmpassword">Repeat your password</label>
                       </div>
                       <div *ngIf="confirmpassword?.invalid && (confirmpassword?.dirty || confirmpassword?.touched)" class="alert alert-danger mt-1">
